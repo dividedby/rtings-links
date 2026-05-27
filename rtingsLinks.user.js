@@ -5,7 +5,7 @@
 // @description Opens shopping links in new tabs on rtings.com without affecting the current tab
 // @version     1.1
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
-// @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbyerror@gmail.com&item_name=Rtings+Tab+Donation
+// @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Rtings+Tab+Donation
 // @contributionAmount  $1
 // @match       https://www.rtings.com/*
 // run-at       document-idle

@@ -3,7 +3,7 @@
 // @namespace   https://greasyfork.org/en/users/594496-divided-by
 // @author      dividedby
 // @description Opens shopping links in new tabs on rtings.com without affecting the current tab
-// @version     1.2
+// @version     1.3
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Rtings+Tab+Donation
 // @contributionAmount  $1
@@ -24,32 +24,14 @@
                !link.hostname.endsWith('.rtings.com');
     }
 
-    function handleClick(event) {
-        const link = event.currentTarget;
-        if (isExternal(link)) {
+    // Single delegated capture-phase listener handles current and future links.
+    document.addEventListener('click', event => {
+        const link = event.target.closest('a[href]');
+        if (link && isExternal(link)) {
             event.preventDefault();
             event.stopPropagation();
             window.open(link.href, '_blank', 'noopener,noreferrer');
         }
-    }
-
-    function enhanceLinks() {
-        const links = document.querySelectorAll('a[href]:not([data-enhanced])');
-        links.forEach(link => {
-            link.setAttribute('data-enhanced', 'true');
-            if (isExternal(link)) {
-                link.addEventListener('click', handleClick, true);
-            }
-        });
-    }
-
-    enhanceLinks();
-
-    const observer = new MutationObserver(mutations => {
-        if (mutations.some(mutation => mutation.addedNodes.length > 0)) {
-            enhanceLinks();
-        }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+    }, true);
 })();
 

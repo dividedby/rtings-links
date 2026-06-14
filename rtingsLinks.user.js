@@ -3,7 +3,7 @@
 // @namespace   https://greasyfork.org/en/users/594496-divided-by
 // @author      dividedby
 // @description Opens shopping links in new tabs on rtings.com without affecting the current tab
-// @version     1.1
+// @version     1.2
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Rtings+Tab+Donation
 // @contributionAmount  $1
@@ -17,20 +17,16 @@
 (function() {
     'use strict';
 
-    // Array of domain patterns to match
-    const domainPatterns = [
-        'amazon.com',
-        'ebay.com',
-        'walmart.com',
-        'target.com',
-        'bestbuy.com',
-        'bhphotovideo.com',
-        'shop-links.co'
-    ];
+    // Any http(s) link whose host isn't rtings.com is treated as external.
+    function isExternal(link) {
+        return (link.protocol === 'http:' || link.protocol === 'https:') &&
+               link.hostname !== 'rtings.com' &&
+               !link.hostname.endsWith('.rtings.com');
+    }
 
     function handleClick(event) {
         const link = event.currentTarget;
-        if (domainPatterns.some(pattern => link.href.includes(pattern))) {
+        if (isExternal(link)) {
             event.preventDefault();
             event.stopPropagation();
             window.open(link.href, '_blank', 'noopener,noreferrer');
@@ -38,11 +34,12 @@
     }
 
     function enhanceLinks() {
-        const selector = domainPatterns.map(pattern => `a[href*="${pattern}"]`).join(',');
-        const links = document.querySelectorAll(`${selector}:not([data-enhanced])`);
+        const links = document.querySelectorAll('a[href]:not([data-enhanced])');
         links.forEach(link => {
             link.setAttribute('data-enhanced', 'true');
-            link.addEventListener('click', handleClick, true);
+            if (isExternal(link)) {
+                link.addEventListener('click', handleClick, true);
+            }
         });
     }
 

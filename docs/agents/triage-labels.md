@@ -31,8 +31,6 @@ to the actual label strings used in this repo's issue tracker.
 | Large      | `size:L`  | 3–5 days             |
 | Extra large| `size:XL` | > 1 week             |
 
-For full label details (colors, tiers, remove-stock rule) see `docs/agents/labels.md`.
-
 When a skill mentions a role (e.g. "apply the AFK-ready triage label"), use the
 corresponding label string from this table. Edit state-label rows to match whatever
 vocabulary you actually use in a given repo.

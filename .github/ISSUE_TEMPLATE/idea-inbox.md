@@ -33,8 +33,8 @@ are raw, un-actioned ideas. When I ask you to "check the idea inbox," work them:
    this repo. Decide whether it (a) already exists → note and drop it, (b) fits INTO
    an existing issue → comment there instead of making a new one, or (c) BLOCKS or
    DEPENDS ON an existing issue → record that relationship.
-3. **Grill** — for ideas I ask you to act on, run `/grill-with-docs` to build shared
-   understanding and a plan against this repo's CONTEXT.md / ADRs.
+3. **Grill** — for ideas I ask you to act on, run `/grilling` to stress-test the
+   idea and build a plan before scoping.
 4. **Promote** — turn the grilled idea into tracked work with `/to-prd` and/or
    `/to-issues`.
 5. **Refine** — rewrite the resulting issue(s) with `/software-design`.

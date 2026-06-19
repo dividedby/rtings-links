@@ -38,16 +38,14 @@ end-to-end, adapting to what *this* idea needs:
    relationship.
 2. **Pick only the steps it needs** — do not run the whole pipeline by rote. Choose
    from:
-   - `/grill-with-docs` — when the idea is fuzzy or contends with the domain model
-     (CONTEXT.md / ADRs); build shared understanding first.
+   - `/grilling` — when the idea is fuzzy; stress-test it before scoping.
    - `/to-prd` — when it's big enough to warrant a spec before issues.
    - `/to-issues` — to carve it into independently-grabbable tracked work.
    - `/software-design` — when the work spans modules/seams and needs a design pass.
    A small, clear idea may need only `/to-issues`.
-3. **Labels** — when filing issues, apply labels from `docs/agents/labels.md`: state
-   (`needs-triage` to start), category (`bug` / `enhancement` / `chore` / `epic`),
-   and a size estimate (`size:S` / `size:M` / `size:L` / `size:XL`). The compact
-   vocabulary reference is `docs/agents/labels.md`.
+3. **Labels** — when filing issues, apply labels from `docs/agents/triage-labels.md`:
+   state (`needs-triage` to start), category (`bug` / `enhancement` / `chore` / `epic`),
+   and a size estimate (`size:S` / `size:M` / `size:L` / `size:XL`).
 
 4. **Aim for a strong agent brief** — strive to emit a `ready-for-agent` issue that
    clears the strong-agent-brief bar (clear module + acceptance criteria + TDD

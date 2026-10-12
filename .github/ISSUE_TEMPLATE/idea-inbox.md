@@ -35,10 +35,9 @@ are raw, un-actioned ideas. When I ask you to "check the idea inbox," work them:
    DEPENDS ON an existing issue → record that relationship.
 3. **Grill** — for ideas I ask you to act on, run `/grilling` to stress-test the
    idea and build a plan before scoping.
-4. **Promote** — turn the grilled idea into tracked work with `/to-prd` and/or
-   `/to-issues`.
-5. **Refine** — rewrite the resulting issue(s) with `/software-design`.
-6. **Maintain** — keep this list sorted: un-actioned ideas always at the top of
+4. **Promote** — turn the grilled idea into tracked work with `/to-spec` and/or
+   `/to-tickets`.
+5. **Maintain** — keep this list sorted: un-actioned ideas always at the top of
    `## Ideas`; once an idea becomes an issue/PR, move it under **✅ Actioned**, check
    it, and append `→ #<num>`.
 

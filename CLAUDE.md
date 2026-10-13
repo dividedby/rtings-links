@@ -18,7 +18,7 @@ Every **user-facing change** moves these together, in the same commit or PR:
 
 - the script's `@version` (keep its `x.y` numbering);
 - `CHANGELOG.md`: an entry under `## [Unreleased]`, rolled into a dated version section at
-  release (see `docs/agents/changelog-guideline.md` in General-URL-Cleaner-Revived for the style);
+  release (style: `docs/agents/changelog-guideline.md`);
 - `README.md` when what a user sees or does changes;
 - `greasyfork-description.md`: the Greasy Fork listing text, with a **New in x.y** section.
   Greasy Fork only picks it up if the listing is set to sync from this repo (owner's Greasy Fork
@@ -60,6 +60,12 @@ GitHub issues in `dividedby/rtings-links` (via `gh`). See `docs/agents/issue-tra
 
 ### Triage labels
 State: `needs-triage`, `ready-for-agent`, `ready-for-human`, `blocked`, `wontfix`. Category: `bug`, `enhancement`, `chore`, `epic`. Size: `size:S/M/L/XL`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+Single-context: root `CONTEXT.md` + `docs/adr/` (created when a term or decision first needs one). See `docs/agents/domain.md`.
+
+### Changelog
+See `docs/agents/changelog-guideline.md`.
 
 ## Intake convention
 

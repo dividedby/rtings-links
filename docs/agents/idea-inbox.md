@@ -55,13 +55,15 @@ end-to-end, adapting to what *this* idea needs:
    the loop on the original idea.
 3. **Pick only the steps it needs** — do not run the whole pipeline by rote. Choose
    from:
-   - `/grilling` — when the idea is fuzzy; stress-test it before scoping.
+   - `/grill-with-docs` — when the idea is fuzzy or contends with the domain model
+     (CONTEXT.md / ADRs); build shared understanding first.
    - `/to-spec` — when it's big enough to warrant a spec before issues.
    - `/to-tickets` — to carve it into independently-grabbable tracked work.
    A small, clear idea may need only `/to-tickets`.
-4. **Labels** — when filing issues, apply labels from `docs/agents/triage-labels.md`:
-   state (`needs-triage` to start), category (`bug` / `enhancement` / `chore` / `epic`),
-   and a size estimate (`size:S` / `size:M` / `size:L` / `size:XL`).
+4. **Labels** — when filing issues, apply labels from `docs/agents/triage-labels.md`: state
+   (`needs-triage` to start), category (`bug` / `enhancement` / `chore` / `epic`),
+   and a size estimate (`size:S` / `size:M` / `size:L` / `size:XL`). The compact
+   vocabulary reference is `docs/agents/triage-labels.md`.
 
 5. **Aim for a strong agent brief** — strive to emit a `ready-for-agent` issue that
    clears the strong-agent-brief bar (clear module + acceptance criteria + TDD

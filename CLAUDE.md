@@ -2,7 +2,7 @@
 
 ## Project
 
-A single userscript, `rtingsLinks.user.js`, that opens rtings.com's shopping links in a new tab while the current tab stays put. No build step, no tests. Installs and updates come from Greasy Fork (the `@updateURL`/`@downloadURL` in the header).
+A single userscript, `rtingsLinks.user.js`, that opens rtings.com's shopping links in a new tab while the current tab stays put. No build step and no dependencies. Behavior tests in `test/rtingsLinks.test.js` run the script against small hand-made fakes (Node's built-in runner): run plain `node --test` from the repo root (Node 22; CI runs the same on every push and PR). Installs and updates come from Greasy Fork (the `@updateURL`/`@downloadURL` in the header).
 
 ## Rules
 

@@ -26,7 +26,8 @@ Rtings opens them in the same tab, which loses your place.
 ## Development
 
 The script is a single file, [`rtingsLinks.user.js`](rtingsLinks.user.js), with no build
-step. Bump `@version` with every change users would notice, and add it to the
+step and no dependencies. Tests live in [`test/`](test/): run `node --test` from the
+repo root (Node 22). Bump `@version` with every change users would notice, and add it to the
 [changelog](CHANGELOG.md) and [`greasyfork-description.md`](greasyfork-description.md).
 Bugs and ideas go in the [issues](https://github.com/dividedby/rtings-links/issues).
 

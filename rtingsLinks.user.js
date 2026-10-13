@@ -17,26 +17,24 @@
 // @updateURL   https://update.greasyfork.org/scripts/508341/Rtings%20Open%20Shopping%20Links%20in%20New%20Tab%20Only.meta.js
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(() => {
+  'use strict';
 
-    // Any http(s) link whose host isn't rtings.com is treated as external.
-    function isExternal(link) {
-        return (link.protocol === 'http:' || link.protocol === 'https:') &&
-               link.hostname !== 'rtings.com' &&
-               !link.hostname.endsWith('.rtings.com');
+  // Any http(s) link whose host isn't rtings.com is treated as external.
+  const isExternal = link =>
+    (link.protocol === 'http:' || link.protocol === 'https:') &&
+    link.hostname !== 'rtings.com' &&
+    !link.hostname.endsWith('.rtings.com');
+
+  // Single delegated capture-phase listener handles current and future links.
+  document.addEventListener('click', event => {
+    // Leave modified and non-left clicks (new tab/window, download) to the browser.
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest('a[href]');
+    if (link && isExternal(link)) {
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(link.href, '_blank', 'noopener,noreferrer');
     }
-
-    // Single delegated capture-phase listener handles current and future links.
-    document.addEventListener('click', event => {
-        // Leave modified and non-left clicks (new tab/window, download) to the browser.
-        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        const link = event.target.closest('a[href]');
-        if (link && isExternal(link)) {
-            event.preventDefault();
-            event.stopPropagation();
-            window.open(link.href, '_blank', 'noopener,noreferrer');
-        }
-    }, true);
+  }, true);
 })();
-

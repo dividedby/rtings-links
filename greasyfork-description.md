@@ -14,3 +14,5 @@ in the same tab, which loses your place.
 - Nothing is sent anywhere: the script only changes how the click opens the link.
 
 Source, changelog and issues: [GitHub](https://github.com/dividedby/rtings-links)
+
+Find it useful? You can [send a tip via PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Rtings+Tab+Donation). Thank you!

@@ -3,13 +3,14 @@
 // @namespace   https://greasyfork.org/en/users/594496-divided-by
 // @author      dividedby
 // @description Opens shopping links in new tabs on rtings.com without affecting the current tab
-// @version     1.3
+// @version     1.4
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Rtings+Tab+Donation
 // @contributionAmount  $1
 // @match       https://www.rtings.com/*
-// run-at       document-idle
-
+// @run-at      document-idle
+// @grant       none
+// @noframes
 // @downloadURL https://update.greasyfork.org/scripts/508341/Rtings%20Open%20Shopping%20Links%20in%20New%20Tab%20Only.user.js
 // @updateURL   https://update.greasyfork.org/scripts/508341/Rtings%20Open%20Shopping%20Links%20in%20New%20Tab%20Only.meta.js
 // ==/UserScript==
@@ -26,6 +27,8 @@
 
     // Single delegated capture-phase listener handles current and future links.
     document.addEventListener('click', event => {
+        // Leave modified and non-left clicks (new tab/window, download) to the browser.
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         const link = event.target.closest('a[href]');
         if (link && isExternal(link)) {
             event.preventDefault();

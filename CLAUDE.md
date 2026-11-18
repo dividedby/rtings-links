@@ -34,11 +34,11 @@ Pushing to `main` is a release once Greasy Fork syncs from it: unfinished work g
 
 ## Where things live
 
-| Topic                                   | File                                 |
-| --------------------------------------- | ------------------------------------ |
-| Issue tracker (GitHub issues, `gh`)     | `docs/agents/issue-tracker.md`       |
-| Triage labels                           | `docs/agents/triage-labels.md`       |
-| Domain docs (`CONTEXT.md`, `docs/adr/`) | `docs/agents/domain.md`              |
-| Changelog style                         | `docs/agents/changelog-guideline.md` |
+| Topic                                    | File                                 |
+| ---------------------------------------- | ------------------------------------ |
+| Issue tracker (GitHub issues, `gh`)      | `docs/agents/issue-tracker.md`       |
+| Triage labels                            | `docs/agents/triage-labels.md`       |
+| Domain docs (`GLOSSARY.md`, `docs/adr/`) | `docs/agents/domain.md`              |
+| Changelog style                          | `docs/agents/changelog-guideline.md` |
 
 Ideas: Idea Inbox is issue [#1](https://github.com/dividedby/rtings-links/issues/1) (label `idea-inbox`); protocol in `docs/agents/idea-inbox.md`.

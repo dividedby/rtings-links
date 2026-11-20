@@ -8,7 +8,7 @@ A single userscript, `rtingsLinks.user.js`, that opens rtings.com's shopping lin
 
 - Test: `node --test` from the repo root (CI: `.github/workflows/test.yml`).
 - Format check: `pnpm format:check` (CI: `.github/workflows/format.yml`).
-- Lint: no linter; `pnpm format:check` is the only static check.
+- Lint: `pnpm lint` (oxlint, default rules, warnings fail; CI `lint` job in `.github/workflows/test.yml`).
 
 ## Rules
 

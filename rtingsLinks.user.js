@@ -4,7 +4,7 @@
 // @author      dividedby
 // @description Opens shopping links in new tabs on rtings.com without affecting the current tab
 // @version     1.4
-// @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
+// @license     MIT
 // @homepageURL https://github.com/dividedby/rtings-links
 // @supportURL  https://github.com/dividedby/rtings-links/issues
 // @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Rtings+Tab+Donation

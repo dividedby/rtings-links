@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/2.0.0/).
 
 ### Changed
 
+- The licence is now MIT (was GPL-3.0). Releases before this change stay under GPL-3.0.
 - Internal: code brought to the shared style, and tests added. No behavior change.
 
 ## [1.4] - 2026-10-13
